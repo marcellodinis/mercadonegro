@@ -4,6 +4,7 @@ require_once("vendor/autoload.php"); //Carregar as dependências do Composer.
 
 use \Slim\Slim;
 use \Mercadonegro\Page;
+use \Mercadonegro\PageAdmin;
 
 $app = new Slim();
 
@@ -15,14 +16,16 @@ $app->get('/', function() {
 
 	$page->setTpl("index");
 
-    
-/*	$sql = new Mercadonegro\DB\Sql();
+});
 
-	$results = $sql->select("SELECT * FROM tb_users");
+$app->get('/mandachuva', function() {
 
-	echo json_encode($results);
+	$page = new PageAdmin();
+	
+	$page->setTpl("index");
+	
+	
 
-*/// Só para testes de ligação à DB.
 
 });
 
