@@ -1,3 +1,2 @@
-# Projeto Mercadonegro
+# Loja Online Mercadonegro
 
-Template usado no projeto [Almsaeed Studio](https://almsaeedstudio.com)
