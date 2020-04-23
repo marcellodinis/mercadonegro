@@ -1,8 +1,11 @@
 <?php 
 
-require_once("vendor/autoload.php");
+require_once("vendor/autoload.php"); //Carregar as dependências do Composer.
 
-$app = new \Slim\Slim();
+use \Slim\Slim;
+use \Mercadonegro\Page;
+
+$app = new Slim();
 
 $app->config('debug', true);
 
@@ -11,6 +14,7 @@ $app->get('/', function() {
 	$page = new Page();
 
 	$page->setTpl("index");
+
     
 /*	$sql = new Mercadonegro\DB\Sql();
 
@@ -18,10 +22,10 @@ $app->get('/', function() {
 
 	echo json_encode($results);
 
-////FINS DE TESTE SÓ
-*/
+*/// Só para testes de ligação à DB.
+
 });
 
 $app->run();
 
- ?>
+?>
